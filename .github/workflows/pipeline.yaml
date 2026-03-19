@@ -35,7 +35,7 @@ jobs:
       - name: Instalando SamGrep
         run: pip install semgrep
       - name: analise estatica avançada
-        run: samgrep --config=auto .
+        run: semgrep --config=auto .
   analise_dependencias:
     name: "Safety"
     runs-on: ubuntu-latest
