@@ -27,6 +27,15 @@ jobs:
         run: pip install bandit
       - name: Análise estática
         run: bandit -r .
+  analise_estatica_avancada:
+    name: "SamGrep"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Instalando SamGrep
+        run: pip install semgrep
+      - name: analise estatica avançada
+        run: samgrep --config=auto .
   analise_dependencias:
     name: "Safety"
     runs-on: ubuntu-latest
